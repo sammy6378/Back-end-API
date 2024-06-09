@@ -1,0 +1,87 @@
+###
+
+GET http://localhost:8000/ok
+
+###
+GET http://localhost:8000/restraunt/4
+
+###
+POST http://localhost:8000/restraunt
+Content-Type: application/json
+
+{
+
+    "name": "Naivas",
+    "street_address": "3021",
+    "zip_code": "0003",
+    "city_id": 2,
+    "created_at": "2018-04-24",
+    "updated_at": "2018-04-24"
+}
+
+
+###
+DELETE http://localhost:8000/restraunt/5
+
+###
+PUT http://localhost:8000/restraunt/4
+Content-Type: application/json
+
+{
+    "name": "SalimGrill Classic"
+}
+
+###
+POST http://localhost:8000/restraunt
+Content-Type: application/json
+
+{
+
+    "name": "Jumia",
+    "street_address": "3111",
+    "zip_code": "0008",
+    "city_id": 3,
+    "created_at": "2018-02-23",
+    "updated_at": "2024-04-24"
+}
+
+
+
+###
+GET http://localhost:8000/restraunt/7
+
+
+###
+GET http://localhost:8000/users/4
+
+###
+POST http://localhost:8000/users
+Content-Type: application/json
+
+{
+
+    "name": "John Doe",
+    "contactPhone":"+25473200219",
+    "phoneVerified":true,
+    "email": "johndoe@gmail.com",
+    "emailVerified": true,
+    "confirmationCode":"2045",
+    "password": "password",
+    "createdAt": "2018-04-24",
+    "updatedAt": "2018-04-24"
+}
+
+###
+PUT http://localhost:8000/users/4
+Content-Type: application/json
+
+{
+
+    "name": "Ronney Otieno",
+    "contactPhone":"+254737204332",
+    "email": "ronneyO@gmail.com",
+    "confirmationCode":"2Z01",
+    "password": "@ronnie#6"
+}
+###
+GET http://localhost:8000/state/2
