@@ -11,6 +11,9 @@ importers:
       '@hono/node-server':
         specifier: ^1.11.2
         version: 1.11.2
+      '@hono/zod-validator':
+        specifier: ^0.2.2
+        version: 0.2.2(hono@4.4.4)(zod@3.23.8)
       '@neondatabase/serverless':
         specifier: ^0.9.3
         version: 0.9.3
@@ -463,6 +466,12 @@ packages:
     resolution: {integrity: sha512-JhX0nUC66GeDxpIdMKWDRMEwtQBa64CY907iAF1sYqb4m2p2PdSU7zkbnNhAZLg/6IjSlTuj6CF307JlBXVvpg==}
     engines: {node: '>=18.14.1'}
 
+  '@hono/zod-validator@0.2.2':
+    resolution: {integrity: sha512-dSDxaPV70Py8wuIU2QNpoVEIOSzSXZ/6/B/h4xA7eOMz7+AarKTSGV8E6QwrdcCbBLkpqfJ4Q2TmBO0eP1tCBQ==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+
   '@neondatabase/serverless@0.9.3':
     resolution: {integrity: sha512-6ZBK8asl2Z3+ADEaELvbaVVGVlmY1oAzkxxZfpmXPKFuJhbDN+5fU3zYBamsahS/Ch1zE+CVWB3R+8QEI2LMSw==}
 
@@ -721,6 +730,9 @@ packages:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
     engines: {node: '>=0.4'}
 
+  zod@3.23.8:
+    resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
+
 snapshots:
 
   '@esbuild-kit/core-utils@3.3.2':
@@ -938,6 +950,11 @@ snapshots:
     optional: true
 
   '@hono/node-server@1.11.2': {}
+
+  '@hono/zod-validator@0.2.2(hono@4.4.4)(zod@3.23.8)':
+    dependencies:
+      hono: 4.4.4
+      zod: 3.23.8
 
   '@neondatabase/serverless@0.9.3':
     dependencies:
@@ -1164,3 +1181,5 @@ snapshots:
   undici-types@5.26.5: {}
 
   xtend@4.0.2: {}
+
+  zod@3.23.8: {}
