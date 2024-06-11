@@ -52,7 +52,7 @@ GET http://localhost:8000/restraunt/7
 
 
 ###
-GET http://localhost:8000/users/4
+GET http://localhost:8000/users/1
 
 ###
 POST http://localhost:8000/users
