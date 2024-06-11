@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import "dotenv/config"
-import { userRouter } from './main/main.router'
+import { userRouter } from './users/user.router'
 
 
 const app = new Hono()
@@ -18,7 +18,4 @@ serve({
 // custom route
 app.route('/',userRouter)
 
-app.get('/state/:id', async (c) => {
-  
-});
 
