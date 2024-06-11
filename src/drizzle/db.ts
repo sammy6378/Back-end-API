@@ -1,33 +1,20 @@
 
-import { drizzle } from "drizzle-orm/neon-http";
-import { neon } from "@neondatabase/serverless";
-import { config } from "dotenv";
-import { Client } from "pg";
-
 import "dotenv/config";
-import { drizzle as drizzlenode } from "drizzle-orm/node-postgres";
-import * as schema from "./schema";
+import { drizzle } from "drizzle-orm/node-postgres";
+import { Client } from "pg";
+import * as schema from "./schema"
 
-config({ path: ".env" });
-
-const sql = neon(process.env.DATABASE_URL!);
-export const dbs = drizzle(sql);
-
-
-// local database
 export const client = new Client({
-    connectionString: process.env.Database_url as string,
-    ssl:false
+    connectionString: process.env.Database_URL as string,   //get the database url from the environment
 })
 
-const main = async() =>{
-    await client.connect();
+const main = async () => {
+    await client.connect();  //connect to the database
 }
-
 main();
 
-const db = drizzlenode(client,{schema,logger:true})
 
-export default db;
+const db = drizzle(client, { schema, logger: true })  //create a drizzle instance
 
+export default db; 
 
